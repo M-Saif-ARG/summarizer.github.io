@@ -1,0 +1,118 @@
+.header {
+  width: 100%;
+  line-height: 50px;
+  background-color: #136df5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  box-shadow: 5px 3px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  padding-left: 18px;
+}
+.copyright {
+  display: inline-block;
+  vertical-align: middle;
+}
+footer {
+  line-height: 30px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  background-color: #136df5;
+}
+textarea{
+  width: 100%;
+  line-height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin: 10px 0;
+  resize: none;
+}
+/* form{
+  min-height: 50px;
+  color: #ecf0f1;
+  padding: 15px 10px 5px 10px;
+  box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  position: relative;
+} */
+.main_note{
+  max-width: 50%;
+  padding: 15px 10px 5px 10px;
+  margin: 20px auto;
+  box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+.MuiButton-root{
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  bottom: -28px;
+  cursor: pointer;
+  background-color: #fff !important;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
+  border-radius: 50% !important;
+  left: 75%;
+}
+.MuiButton-root:hover .upload_sign{
+  font-size: 45px !important;
+  font-weight: 900;
+  color: #3f8b13;
+  cursor: pointer;
+  z-index: 222;
+  background: transparent;    
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  color: #8b2f13;
+  font-weight: bolder;
+  row-gap: 40px;
+}
+.flex-item {
+  flex:1px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  .flex-item {
+    flex: 100%;
+  }
+}
+p{
+  word-break: keep-all;
+  white-space: normal;
+}
+.lenInput{
+  max-width: 30%;
+  padding: 15px 10px 15px 10px;
+  margin: 20px auto;
+  box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.lenOutput{
+  max-width: 30%;
+  padding: 15px 10px 15px 10px;
+  margin: 20px auto;
+  box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

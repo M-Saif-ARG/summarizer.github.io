@@ -5,15 +5,19 @@ const TextOutput = (props) => {
 
 
     const [wordCountI, setWordCountI] = useState(0);
+    const[sentenceCount, setSentenceCountI] = useState(0);
     useEffect(() => {
         if (props.text !== null) {
             const words = props.text.split(' ').filter(word => word !== '');
             setWordCountI(words.length);
+
+            const sentences = props.text.match(/[.!?]+/g);
+            setSentenceCountI(sentences ? sentences.length : 0);
         }
+
     }, [props.text]);
 
     const [data, setData] = useState("");
-
 
     const [wordCountO, setWordCountO] = useState(0);
     useEffect(() => {
@@ -27,16 +31,15 @@ const TextOutput = (props) => {
 
         const options = {
             method: 'POST',
-            url: 'https://text-analysis12.p.rapidapi.com/summarize-text/api/v1.1',
+            url: 'https://gpt-summarization.p.rapidapi.com/summarize',
             headers: {
                 'content-type': 'application/json',
                 'X-RapidAPI-Key': 'c3b125402cmsh6bcd0ad8f26e84ap1c5751jsn2ff9bfe15514',
-                'X-RapidAPI-Host': 'text-analysis12.p.rapidapi.com'
+                'X-RapidAPI-Host': 'gpt-summarization.p.rapidapi.com'
             },
             data: {
-                language: 'english',
-                summary_percent: 25,
-                text: props.text
+                text: props.text,
+                num_sentences: sentenceCount % 10
             }
         };
 

@@ -5,13 +5,6 @@ import TextInput from "./TextInput";
 import TextOutput from "./TextOutput";
 
 const App = () => {
-    // const [addItem, setAddItem] = useState([]);
-    // const addNote = (note) => {
-    //     setAddItem(() => {
-    //         return [note];
-    //     });
-
-    // };
     const [displayText, setDisplayText] = useState('');
 
     const handleButtonClick = (text) => {
